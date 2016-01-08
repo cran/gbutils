@@ -1,0 +1,27 @@
+import(methods)
+importFrom("stats", "rbinom", "runif")
+importFrom("utils", "savehistory")
+
+exportMethods(
+    "pad"
+    # todo: is it necessary to export also methods for "pad<-"?
+)
+exportClassPattern("objectPad")
+
+export(
+    isargunnamed,
+    isNA,
+    mintersect,
+    myouter,
+    nposargs,
+    pad,
+    "pad<-",
+    padcheck,
+    parse_text,
+    raw_history,
+    shiftleft,
+    shiftright,
+    sim_complex,
+    sim_numbers,
+    sim_real
+    )
