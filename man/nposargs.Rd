@@ -51,9 +51,9 @@ nposargs(x, a = FALSE)
 % \seealso{ ~~objects to See Also as \code{\link{help}}, ~~~ }
 \examples{
 f <- function(x,y,z,...){
-        call <- sys.call()
-        nposargs(call)
-     }
+    call <- sys.call()
+    nposargs(call)
+}
 f(a,b,c)  # 3
 f(a, , )  # 3
 f(a,  )   # 2

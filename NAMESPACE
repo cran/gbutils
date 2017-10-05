@@ -1,6 +1,7 @@
 import(methods)
-importFrom("stats", "rbinom", "runif")
+importFrom("stats", "rbinom", "runif", "uniroot")
 importFrom("utils", "savehistory")
+importFrom("graphics", "plot")
 
 exportMethods(
     "pad"
@@ -12,6 +13,7 @@ export(
     isargunnamed,
     isNA,
     mintersect,
+    missing_arg,
     myouter,
     nposargs,
     pad,
@@ -23,5 +25,10 @@ export(
     shiftright,
     sim_complex,
     sim_numbers,
-    sim_real
+    sim_real,
+    cdf2quantile,
+    plotpdf
     )
+
+
+
