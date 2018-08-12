@@ -1,6 +1,7 @@
-e7d58a88a3b368d49fb20c96dc9f115e *DESCRIPTION
-008373509b1994ee4d063d354e3c582d *NAMESPACE
-25eb37ab9b82fc9570016cd447f1e357 *NEWS
+26a1843177cbe91f4063ee5461ce2655 *DESCRIPTION
+2ef802ec212745515f9e514fbe970a55 *NAMESPACE
+8ae79633ede9644db3a71aaea674aa6a *NEWS.md
+b2483473b9f8cbd0c0d7a9233edd6748 *R/S4utils.R
 ad585fe9477792dd8d7f1e3899831bf6 *R/args.R
 f74ebfafe1c6b038ac4f64cbe8c9e0ff *R/cdf2qf.R
 9d4b3d340a59c452db83e6ca9ecdbea6 *R/history.R
@@ -9,11 +10,14 @@ f74ebfafe1c6b038ac4f64cbe8c9e0ff *R/cdf2qf.R
 5f0ac29be77f4318f51debe7c29f405e *R/pad.R
 965f2102f1d50a05b92832ba84de44aa *R/parse_text.R
 2f306ed0ac825185d48fffec1afb3a82 *R/sim_numbers.R
+006a385c2b5505c6efa6c4fc70ad5d11 *README.md
 e4def518ec4ac66446db013f0a8b0d40 *TODO
-21309595608039bf1fc8ca01ccca051f *build/vignette.rds
-ef90a442000ecd7244a0756acf46e702 *inst/doc/Plot_pdf.R
-0163d0d4970fc9063ab5339d1744b345 *inst/doc/Plot_pdf.Rnw
-ffe44d11c029941a675f3ce427aa8572 *inst/doc/Plot_pdf.pdf
+774e89fddecca7bb9187d4d63eeff564 *build/partial.rdb
+5ecf366718993528b2d4e7ae6c3013d6 *build/vignette.rds
+6165712ac6ed903e96de050db7573925 *inst/doc/Plot_pdf.R
+b35d48ca7c9fffc94e9d16aa1beca62b *inst/doc/Plot_pdf.Rnw
+d13dd311767961f1deb65fee1570a1b7 *inst/doc/Plot_pdf.pdf
+2e68f7ea3f07d9cd3bad128f726275a2 *man/adjacencyOfClasses.Rd
 1672d533e919ee0d03ddfc2ad740b742 *man/cdf2quantile.Rd
 384230cb0c3fa878981930242b21bbf5 *man/isNA.Rd
 3d3b3e1a2c36ea3ee3effdc4eb4c7d86 *man/isargunnamed.Rd
@@ -28,5 +32,4 @@ e2e2f54323631b259ba34d41e2cea4c5 *man/parse_text.Rd
 04adcc8779394b394461c878346f2fff *man/raw_history.Rd
 adb29b51a13de085cda4d78cb4cb21a4 *man/sim_complex.Rd
 21894869a7e2afce10d4c788e3963c87 *man/sim_numbers.Rd
-0163d0d4970fc9063ab5339d1744b345 *vignettes/Plot_pdf.Rnw
-50b7ac12b7de749eb21fd7e2c7e7b491 *vignettes/auto/Plot_pdf.el
+b35d48ca7c9fffc94e9d16aa1beca62b *vignettes/Plot_pdf.Rnw

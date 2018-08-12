@@ -123,10 +123,10 @@ plotpdf(pf1, cdf = pf1) # plot the cdf
 @
 
 
-Additional arguments can be specifiwed as for |plot()|:
+Additional arguments can be specified as for |plot()|:
 <<fig=TRUE>>=
 plotpdf(pf1, cdf = pf1)                           # plot the cdf
-plotpdf(df1, cdf = pf1, add = TRUE, col = "blue") # overlay the cdf
+plotpdf(df1, cdf = pf1, add = TRUE, col = "blue") # overlay the pdf
 @
 
 \bigskip{}

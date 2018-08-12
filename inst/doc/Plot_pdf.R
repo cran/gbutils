@@ -65,7 +65,7 @@ plotpdf(pf1, cdf = pf1) # plot the cdf
 ### code chunk number 10: Plot_pdf.Rnw:127-129
 ###################################################
 plotpdf(pf1, cdf = pf1)                           # plot the cdf
-plotpdf(df1, cdf = pf1, add = TRUE, col = "blue") # overlay the cdf
+plotpdf(df1, cdf = pf1, add = TRUE, col = "blue") # overlay the pdf
 
 
 ###################################################
