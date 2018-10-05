@@ -1,4 +1,5 @@
 ### R code from vignette source 'Plot_pdf.Rnw'
+### Encoding: ISO8859-1
 
 ###################################################
 ### code chunk number 1: Plot_pdf.Rnw:61-62
