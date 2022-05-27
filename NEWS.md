@@ -1,7 +1,15 @@
-# Changes in Version 0.4-0 (CRAN)
+# gbutils 0.4.0.9000
+
+* new function `rpoly()` creates polynomials with real coefficients from their
+  zeroes (roots) given in Cartesian or polar form.
+
+* minor edits of the documentation of `adjacencyOfClasses()`.
 
 
-# Changes in Version 0.3-1
+# gbutils 0.4-0 (CRAN)
+
+
+# gbutils 0.3-1
 
 * deal with a NOTE on CRAN.
 
@@ -11,7 +19,7 @@
   and plotting them.
 
 
-# Changes in Version 0.2-4 - 0.3.0 (CRAN)
+# gbutils 0.2-4 - 0.3.0 (CRAN)
 
 * new function `adjacencyOfClasses()` gives the graph of the classes defined in
   one or more packages in several ways. It can also give a Wolfram language
@@ -22,19 +30,19 @@
   details section (see `adjacencyOfClasses()`). 
 
 
-# Changes in Version 0.2-3
+# gbutils 0.2-3
 
 * created `README.*`.
 * added website created with 'pkgdown'.
 * added github URL to DESCRIPTION.
 
 
-# Changes in Version 0.2-2
+# gbutils 0.2-2
 
 * corrected a couple of typo's in the vignette.
 
 
-# Changes in Version 0.2-1 (CRAN)
+# gbutils 0.2-1 (CRAN)
 
 * New function `missing_arg()` returns TRUE if an element of a pairlist is
   missing.
@@ -48,6 +56,6 @@
 * A vignette illustrates `plotpdf()`.
 
 
-# Changes in Version 0.2-0 (CRAN)
+# gbutils 0.2-0 (CRAN)
 
 * First CRAN version

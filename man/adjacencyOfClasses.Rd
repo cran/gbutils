@@ -12,7 +12,7 @@ adjacencyOfClasses(packages, externalSubclasses = FALSE,
 \arguments{
   \item{packages}{names of one or more packages, a character vector}
   \item{externalSubclasses}{
-    if \code{TRUE} exclude subtrees of classes not defined in any of the
+    if \code{TRUE}, exclude subtrees of classes not defined in any of the
     packages listed in argument \code{packages}.
   }
   \item{result}{
@@ -69,23 +69,23 @@ adjacencyOfClasses(packages, externalSubclasses = FALSE,
   If \code{result} is \code{"matrixOfPairs"}, the edges of the
   graph are represented by a character matrix with two columns, where each row 
   represents an edge from the element in the first column to the element
-  in the second. In this example there is ne edge, so the matrix
+  in the second. In this example there is one edge, so the matrix
   contains one row:
   
   \printExample{adjacencyOfClasses("gbutils", result = "matrixOfPairs")}
   
   If \code{result} is \code{"adjacencyMatrix"}, the adjacency matrix of
   the graph is in component "AM" of the returned list. Element \eqn{(i,j)} of
-  this matrix is equal to one, if the \eqn{j}{j-}th class is superclass
-  to the \eqn{i}{i-}th. In other words, the \eqn{i}{i-}th gives the
+  this matrix is equal to one, if the \eqn{j}{j-}th class is a superclass
+  to the \eqn{i}{i-}th. In other words, the \eqn{j}{j-}th column gives the
   superclasses of the \eqn{i}{i-}th class. Here the element in position
   (1,2) is non-zero, so \code{"list"} is the superclass of \code{"objectPad"}:
 
   \printExample{adjacencyOfClasses("gbutils", result = "adjacencyMatrix")}
   
-  Note that inluding the vertices in the result is not redundant, since
+  Note that including the vertices in the result is not redundant, since
   some may not be in any edge. This can happen if a class does not
-  haved any superclasses and subclasses.
+  have any superclasses and subclasses.
   
   As described above the result is not converted to a graph object but
   it can be fed to functions provided by a number of \R packages. 
@@ -102,8 +102,10 @@ adjacencyOfClasses(packages, externalSubclasses = FALSE,
 
   \printExample{adjacencyOfClasses("gbutils", Wolfram = TRUE)}
 
-  Setting \code{result = "adjacencyMatrix"} in the last \R command would
-  export a graph based on its adjacency matrix. 
+  Setting \code{result = "adjacencyMatrix"} in the last \R command
+  exports the graph in terms of its adjacency matrix:
+
+  \printExample{adjacencyOfClasses("gbutils", Wolfram = TRUE, result = "adjacencyMatrix")}
 
 }
 \value{
@@ -156,17 +158,19 @@ adjacencyOfClasses("gbutils", TRUE, Wolfram = TRUE)
 adjacencyOfClasses("gbutils", FALSE, "adjacencyMatrix", Wolfram = TRUE)
 adjacencyOfClasses("gbutils", TRUE,  "adjacencyMatrix", Wolfram = TRUE)
 
-if(requireNamespace("graph") && requireNamespace("Rgraphviz")) withAutoprint({
+if(requireNamespace("graph", quietly = TRUE) &&
+   requireNamespace("Rgraphviz", quietly = TRUE)) withAutoprint({
     ## another package
     adjacencyOfClasses("graph")
     ac1 <- adjacencyOfClasses("graph", FALSE, "adjacencyMatrix")
-    gr_ac1 <- graph::graphAM(adjMat = ac1$AM, edgemode = "directed")
-    if(require("Rgraphviz"))
+    ## note the use of t() below
+    gr_ac1 <- graph::graphAM(adjMat = t(ac1$AM), edgemode = "directed")
+    if(require("Rgraphviz", quietly = TRUE, warn.conflicts = FALSE))
         plot(gr_ac1)
     ## more than one package
     ac2 <- adjacencyOfClasses(c("graph", "Rgraphviz"), FALSE, "adjacencyMatrix")
-    gr_ac2 <- graph::graphAM(adjMat = ac2$AM, edgemode = "directed")
-    if(require("Rgraphviz"))
+    gr_ac2 <- graph::graphAM(adjMat = t(ac2$AM), edgemode = "directed")
+    if(require("Rgraphviz", quietly = TRUE))
         plot(gr_ac2)
 })
 }
